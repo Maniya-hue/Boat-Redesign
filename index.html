@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A concept redesign of the boAt shopping experience." />
+  <title>boAt — Find Your Sound | Concept Redesign</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="announcement">EXTRA 5% OFF ON PREPAID ORDERS <span>·</span> USE CODE <b>BOATHEAD</b></div>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="boAt home">bo<span>A</span>t<span class="dot">.</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#shop">Shop</a><a href="#collections">Collections</a><a href="#why-boat">Why boAt</a><a href="#support">Support</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button>
+      <button class="icon-btn cart-trigger" id="cartToggle" aria-label="Open cart"> <svg viewBox="0 0 24 24"><path d="M3 4h2l2.1 11.2a2 2 0 0 0 2 1.6h8.8a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="10" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg><span id="cartCount">0</span></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <div class="search-panel" id="searchPanel">
+    <input id="searchInput" type="search" placeholder="Search earbuds, headphones, speakers..." aria-label="Search products" />
+    <button id="closeSearch" class="text-btn">Close</button>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> SOUND THAT MOVES YOU</p>
+        <h1>Turn up<br/>your <em>everyday.</em></h1>
+        <p class="hero-description">Big sound. Bold energy. Gear that keeps up with every version of you.</p>
+        <div class="hero-actions"><a class="button button-light" href="#shop">Explore audio <span>↗</span></a><a class="watch-link" href="#collections"><span class="play">▶</span> Find your vibe</a></div>
+        <div class="hero-proof"><div class="avatars"><i>R</i><i>A</i><i>K</i></div><span><b>Made for your rhythm.</b><br/>Loved by the sound community</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of wireless headphones">
+        <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+        <div class="hero-sticker">BASS<br/>ON.<br/><span>WORLD<br/>OFF.</span></div>
+        <img src="assets/hero-headphones.svg" alt="Black and red over-ear headphones" />
+        <div class="hero-product-tag"><span>THE EVERYDAY ICON</span><b>Rockerz Series</b><small>Wireless headphones</small></div>
+      </div>
+      <div class="hero-bottom"><span>01 / 03</span><div class="hero-progress"><i></i></div><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <section class="trust-strip" aria-label="Shopping benefits">
+      <div><span class="trust-icon">✦</span><b>Authentic boAt products</b></div>
+      <div><span class="trust-icon">↗</span><b>Free express delivery*</b></div>
+      <div><span class="trust-icon">↺</span><b>7-day replacement</b></div>
+      <div><span class="trust-icon">▣</span><b>Secure checkout</b></div>
+    </section>
+
+    <section class="section categories-section" id="collections">
+      <div class="section-heading"><div><p class="eyebrow dark">PICK YOUR PLAY</p><h2>What are you<br/><em>in the mood for?</em></h2></div><p class="section-note">Find the right gear for your kind of loud.</p></div>
+      <div class="category-grid">
+        <a class="category-card category-earbuds" href="#shop" data-filter-link="Earbuds"><span class="category-number">01</span><div class="category-art"><img src="assets/earbuds.svg" alt="Wireless earbuds"/></div><div class="category-label"><span>For life on the go</span><b>Earbuds <i>↗</i></b></div></a>
+        <a class="category-card category-headphones" href="#shop" data-filter-link="Headphones"><span class="category-number">02</span><div class="category-art"><img src="assets/headphones.svg" alt="Over-ear headphones"/></div><div class="category-label"><span>Get lost in the sound</span><b>Headphones <i>↗</i></b></div></a>
+        <a class="category-card category-speakers" href="#shop" data-filter-link="Speakers"><span class="category-number">03</span><div class="category-art"><img src="assets/speaker.svg" alt="Portable Bluetooth speaker"/></div><div class="category-label"><span>Bring the room alive</span><b>Speakers <i>↗</i></b></div></a>
+      </div>
+    </section>
+
+    <section class="section products-section" id="shop">
+      <div class="section-heading product-heading"><div><p class="eyebrow dark">THE CROWD FAVOURITES</p><h2>Sound picks.<br/><em>Zero guesswork.</em></h2></div><a class="underlined-link" href="#shop">View all products ↗</a></div>
+      <div class="shop-toolbar">
+        <div class="filter-pills" role="group" aria-label="Filter products">
+          <button class="filter-pill active" data-filter="All">All gear</button><button class="filter-pill" data-filter="Earbuds">Earbuds</button><button class="filter-pill" data-filter="Headphones">Headphones</button><button class="filter-pill" data-filter="Speakers">Speakers</button>
+        </div>
+        <label class="sort-label">Sort by <select id="sortSelect"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="feature-banner" id="why-boat">
+      <div class="feature-visual"><div class="sound-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span class="feature-stamp">LIVE<br/>LOUD</span></div>
+      <div class="feature-copy"><p class="eyebrow">MORE THAN JUST A PLAYLIST</p><h2>Your world.<br/><em>Your soundtrack.</em></h2><p>From first light workouts to last-song nights, find audio that fits the way you live.</p><a class="button button-red" href="#shop">Find your sound <span>↗</span></a></div>
+    </section>
+
+    <section class="section promise-section" id="support">
+      <div><p class="eyebrow dark">THE boAt PROMISE</p><h2>Good vibes.<br/><em>Good support.</em></h2></div>
+      <div class="promise-grid"><article><span>01</span><h3>Made to move</h3><p>Gear designed to keep pace with your everyday.</p></article><article><span>02</span><h3>Easy ownership</h3><p>Clear product details and support when you need it.</p></article><article><span>03</span><h3>Sound choice</h3><p>Explore by the way you listen, work and play.</p></article></div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="wordmark" href="#">bo<span>A</span>t<span class="dot">.</span></a><p>Find your sound. Make it yours.</p><div><a href="#shop">Shop</a><a href="#support">Support</a><a href="#collections">Collections</a></div><small>Student concept redesign · Not an official boAt website</small></footer>
+
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow dark">YOUR SELECTION</p><h2>Your cart <span id="drawerCount">(0)</span></h2></div><button class="close-drawer" id="closeCart" aria-label="Close cart">×</button></div>
+    <div class="cart-items" id="cartItems"><div class="empty-cart"><span>♫</span><h3>Your cart is taking a breather.</h3><p>Add a sound pick to get things started.</p></div></div>
+    <div class="cart-footer"><div><span>Subtotal</span><b id="cartSubtotal">₹0</b></div><button class="button button-red checkout-btn" id="checkoutBtn">Continue to checkout <span>→</span></button><small>Shipping and offers calculated at checkout.</small></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
